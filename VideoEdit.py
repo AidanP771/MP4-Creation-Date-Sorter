@@ -3,7 +3,7 @@ from os import walk, path
 from moviepy.editor import VideoFileClip, concatenate_videoclips
 
 # Set the path to the folder containing the videos
-folder_path = 'C:/Users/aidan/Desktop/VLOG/Unsorted Video'
+folder_path = 'C:/Users/aidan/Desktop/Test_vllog'
 
 # Loop through all of the folders and subfolders in the specified folder
 for root, dirs, files in walk(folder_path):
