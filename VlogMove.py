@@ -6,6 +6,10 @@ from datetime import datetime
 #folder_path = 'C:/Users/aidan/Desktop/VLOG/Unsorted Video'
 folder_path = 'C:/Users/aidan/Desktop/Test_vllog'
 
+#set path for destination folder for the month folders
+#month_folder_destination_path = 'C:/Users/aidan/Desktop/VLOG/'
+month_folder_destination_path = 'C:/Users/aidan/Desktop/VLOG/Test_vllog'
+
 #dict that maps month numbers to month names
 month_dict = {
     1: 'January',
@@ -40,9 +44,18 @@ def sort_into_month_folders():
             dest_folder_path = os.path.join(month_folder_path, folder_name)
             shutil.move(day_folder_path, dest_folder_path)
 
+#loop through month folder in folder_path
+for month_name in month_dict.values():
+    month_folder_path = os.path.join(month_folder_path, month_name)
+    #check if month folder exists
+    if os.path.exists(month_folder_path):
+        #move month folder to month_folder_destination_path
+        dest_folder_path = os.path.join(month_folder_destination_path, month_name)
+        shutil.move(month_folder_path, dest_folder_path)
 
 # Loop through MP4 files in folder
 mp4_files = [f for f in os.listdir(folder_path) if f.endswith('.MP4'):
+mp4_files.sort()
 for file_name in mp4_files:
         # Get file creation time
         creation_time = os.path.getctime(os.path.join(folder_path, file_name))
