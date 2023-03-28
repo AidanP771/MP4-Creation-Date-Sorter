@@ -4,10 +4,10 @@ import shutil
 from datetime import datetime
 
 # Set the path to the folder containing the MP4 files
-folder_path = 'C:/Users/aidan/Desktop/Test_vllog/Unsorted'
+folder_path = 'C:\Users\aidan\Desktop\VLOG\Unsorted Video'
 
 # Set the path to the destination folder for the month folders
-month_folder_destination_path = 'C:/Users/aidan/Desktop/Test_vllog'
+month_folder_destination_path = 'C:\Users\aidan\Desktop\VLOG'
 
 # Define a dictionary to map month numbers to month names
 month_dict = {
