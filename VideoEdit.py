@@ -3,7 +3,7 @@ from os import walk, path
 from moviepy.editor import VideoFileClip, concatenate_videoclips
 
 # Set the path to the folder containing the videos
-folder_path = '/path/to/videos'
+folder_path = 'C:/Users/aidan/Desktop/VLOG/Unsorted Video'
 
 # Loop through all of the folders and subfolders in the specified folder
 for root, dirs, files in walk(folder_path):
@@ -13,7 +13,7 @@ for root, dirs, files in walk(folder_path):
     # Loop through all of the files in the current folder
     for filename in files:
         # Check if the file is a video file
-        if filename.endswith('.mp4') or filename.endswith('.avi') or filename.endswith('.mov'):
+        if filename.endswith('.MP4') or filename.endswith('.avi') or filename.endswith('.mov'):
             # Get the full path of the file
             file_path = path.join(root, filename)
             
