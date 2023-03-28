@@ -41,10 +41,9 @@ def sort_into_month_folders():
             shutil.move(day_folder_path, dest_folder_path)
 
 
-# Loop through files in folder
-for file_name in os.listdir(folder_path):
-    # Check if file is an MP4
-    if file_name.endswith('.MP4'):
+# Loop through MP4 files in folder
+mp4_files = [f for f in os.listdir(folder_path) if f.endswith('.MP4'):
+for file_name in mp4_files:
         # Get file creation time
         creation_time = os.path.getctime(os.path.join(folder_path, file_name))
         creation_date = datetime.fromtimestamp(creation_time).date()
